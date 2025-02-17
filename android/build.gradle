@@ -26,20 +26,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace "dev.yanshouwang.camerax"
-    compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion 33
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
-    }
-
-    kotlinOptions {
-        jvmTarget = "17"
-    }
-    buildFeatures {
-        buildConfig = true
-    }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
@@ -48,6 +36,10 @@ android {
     }
     lintOptions {
         disable 'InvalidPackage'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 }
 
